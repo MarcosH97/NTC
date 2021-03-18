@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500"
+    tools:context="TableFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:hint="Tamaño"
+            android:background="@color/white"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/filesize_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/capacity_spinner"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/curved_bubble"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/calc_button"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="70dp"
+            android:background="@drawable/curved_button"
+            android:focusable="true"
+            android:text="CALCULAR" />
+    </LinearLayout>
+
+
+    <!--        <androidx.core.widget.NestedScrollView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+    <TableLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alignmentMode="alignBounds"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TableRow android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Conexión"
+                android:textAlignment="center"
+                android:fontFamily="@font/adobeclean_bold"
+                android:textSize="20sp"
+                android:background="@drawable/curved_big_bubble"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/adobeclean_bold"
+                android:gravity="center"
+                android:text="Velocidad"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:background="@drawable/curved_big_bubble"
+               android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/adobeclean_bold"
+                android:gravity="center"
+                android:text="Tiempo"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:background="@drawable/curved_big_bubble"
+                android:layout_margin="5dp"
+                />
+
+        </TableRow>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tb_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="15"
+            android:background="@drawable/curved_ui"
+            tools:listitem="@layout/itemlist_layout" />
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
+        android:background="@drawable/curved_ui_up"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/speed_text"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:hint="Velocidad"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="15dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="textEnd"/>
+
+        <Spinner
+            android:id="@+id/speed_spinner"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:spinnerMode="dropdown" />
+        <TextView
+            android:id="@+id/custom_speed"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

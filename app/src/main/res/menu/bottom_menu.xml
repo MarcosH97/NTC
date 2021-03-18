@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/speed"
+        android:icon="@drawable/ic_speed"
+        android:title="Velocidad de Conexión"
+        android:iconTint="@color/speed_active"
+        android:iconTintMode="add"
+        />
+    <item
+        android:id="@+id/table"
+        android:icon="@drawable/ic_dtime"
+        android:title="Tiempo de Descarga"
+        android:iconTint="@color/time_active"
+        android:iconTintMode="add"
+        />
+    <item
+        android:id="@+id/usage"
+        android:icon="@drawable/ic_speed"
+        android:title="Uso por Hora"
+        android:iconTint="@color/speed_active"
+        android:iconTintMode="add"
+        />
+</menu>

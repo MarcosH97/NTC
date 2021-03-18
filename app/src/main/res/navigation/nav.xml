@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/speed">
+    <fragment
+        android:id="@+id/speed"
+        android:name="com.mahostudios.ntc.Speed"
+        android:label="fragment_speed2"
+        tools:layout="@layout/fragment_speed2" />
+    <fragment
+        android:id="@+id/table"
+        android:name="com.mahostudios.ntc.Table"
+        android:label="fragment_table2"
+        tools:layout="@layout/fragment_table2" />
+    <fragment
+        android:id="@+id/usage"
+        android:name="com.mahostudios.ntc.Usage"
+        android:label="fragment_usage2"
+        tools:layout="@layout/fragment_usage2" />
+</navigation>

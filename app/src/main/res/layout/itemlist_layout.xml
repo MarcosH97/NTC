@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <TableRow
+        android:gravity="center">
+        <TextView
+            android:id="@+id/c_name"
+            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:text="item 1"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/adobeclean_it_bold"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:id="@+id/c_speed"
+            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:text="item 2"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/adobeclean_it_bold"
+            />
+        <TextView
+            android:id="@+id/c_time"
+            android:layout_height="50dp"
+            android:layout_width="120dp"
+            android:text="item 3"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/adobeclean_it_bold"
+            android:layout_marginLeft="5dp"
+            />
+
+    </TableRow>
+
+</TableLayout>
