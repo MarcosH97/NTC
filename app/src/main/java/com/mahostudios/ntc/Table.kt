@@ -162,7 +162,7 @@ class Table : Fragment() {
 
     fun CalcButton(context: Context, v: View, capacities: Array<String>){
         val spinner : Spinner = v.findViewById(R.id.capacity_spinner)
-        val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, capacities)
+        val adapter = ArrayAdapter(context, R.layout.spinner_item, capacities)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener{
@@ -180,7 +180,7 @@ class Table : Fragment() {
     }
     fun LowerSpinner(context: Context, v: View, speeds: Array<String>){
         val spin : Spinner = v.findViewById(R.id.speed_spinner)
-        val sadapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, speeds)
+        val sadapter = ArrayAdapter(context, R.layout.spinner_item, speeds)
         spin.adapter = sadapter
         spin.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener{

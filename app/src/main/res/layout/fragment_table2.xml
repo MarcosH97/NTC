@@ -7,23 +7,20 @@
     android:background="@color/purple_500"
     tools:context="TableFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:gravity="center|start"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grid">
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/curved_bubble"
-    >
+
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textin"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:hint="Tamaño"
@@ -40,18 +37,20 @@
         </com.google.android.material.textfield.TextInputLayout>
     <Spinner
         android:id="@+id/capacity_spinner"
-        android:layout_width="90dp"
+        android:layout_width="70sp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@id/textin"
+        android:background="@drawable/curved_bubble"
+        />
 
-</LinearLayout>
+
 
         <Button
             android:id="@+id/calc_button"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="65dp"
+            android:layout_width="120sp"
+            android:layout_height="50sp"
             android:background="@drawable/curved_button"
             android:focusable="true"
             android:text="CALCULAR"
@@ -59,8 +58,10 @@
             android:textSize="18sp"
             android:elevation="6dp"
             android:fontFamily="@font/adobeclean_bold"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
 
     <!--        <androidx.core.widget.NestedScrollView-->
@@ -76,15 +77,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-        <TableRow android:gravity="center"
-            android:layout_gravity="center">
+        <TableRow>
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:gravity="center"
                 android:text="Conexión"
@@ -93,10 +93,11 @@
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:fontFamily="@font/adobeclean_bold"
                 android:gravity="center"
@@ -105,10 +106,11 @@
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 />
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:fontFamily="@font/adobeclean_bold"
                 android:gravity="center"
@@ -117,6 +119,7 @@
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 />
 
         </TableRow>
@@ -131,12 +134,10 @@
 
     </TableLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center|start"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -160,20 +161,25 @@
 
         <Spinner
             android:id="@+id/speed_spinner"
-            android:layout_width="90dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:layout_toRightOf="@id/speed_text"/>
         <TextView
             android:id="@+id/custom_speed"
             android:layout_width="120dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="45dp"
             android:textAlignment="center"
-            android:gravity="center"
+            android:fontFamily="@font/adobeclean_it_bold"
             android:textSize="20sp"
+
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

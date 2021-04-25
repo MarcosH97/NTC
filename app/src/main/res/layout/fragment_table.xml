@@ -7,7 +7,7 @@
     android:background="@color/purple_500"
     tools:context="TableFragment">
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="120dp"
@@ -22,6 +22,7 @@
             android:layout_height="50dp"
             android:hint="Tamaño"
             android:background="@color/white"
+            android:layout_gravity="center|start"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/filesize_text"
@@ -34,21 +35,21 @@
 
         <Spinner
             android:id="@+id/capacity_spinner"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
+            android:layout_width="80sp"
+            android:layout_height="50sp"
             android:layout_gravity="center"
             android:background="@drawable/curved_bubble"
             android:spinnerMode="dropdown" />
 
         <Button
             android:id="@+id/calc_button"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="70dp"
+            android:layout_width="120sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center|end"
             android:background="@drawable/curved_button"
             android:focusable="true"
             android:text="CALCULAR" />
-    </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     <!--        <androidx.core.widget.NestedScrollView-->
@@ -58,7 +59,6 @@
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:alignmentMode="alignBounds"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,43 +68,48 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-        <TableRow android:gravity="center"
-            android:layout_gravity="center">
+        <TableRow>
 
             <TextView
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:gravity="center"
+                android:layout_gravity="center|start"
                 android:text="Conexión"
                 android:textAlignment="center"
                 android:fontFamily="@font/adobeclean_bold"
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
-                android:layout_margin="5dp"
+                android:paddingStart="5sp"
+                android:paddingEnd="5sp"
+                android:layout_margin="5sp"
                 />
 
             <TextView
-                android:layout_width="120dp"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
                 android:fontFamily="@font/adobeclean_bold"
                 android:gravity="center"
                 android:text="Velocidad"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
-               android:layout_margin="5dp"
+                android:paddingStart="5sp"
+                android:paddingEnd="5sp"
+                android:layout_margin="5sp"
                 />
 
             <TextView
-                android:layout_width="120dp"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
                 android:fontFamily="@font/adobeclean_bold"
-                android:gravity="center"
+                android:layout_gravity="center|end"
                 android:text="Tiempo"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:background="@drawable/curved_big_bubble"
-                android:layout_margin="5dp"
+                android:paddingStart="5sp"
+                android:paddingEnd="5sp"
+                android:layout_margin="5sp"
                 />
 
         </TableRow>
@@ -147,7 +152,7 @@
 
         <Spinner
             android:id="@+id/speed_spinner"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:spinnerMode="dropdown" />

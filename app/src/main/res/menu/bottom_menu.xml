@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/speed"
-        android:icon="@drawable/ic_speed"
+        android:icon="@drawable/ic_speedtestblack"
         android:title="Velocidad de Conexión"
-        android:iconTint="@color/speed_active"
+        android:iconTint="?attr/colorPrimary"
         android:iconTintMode="add"
         />
     <item
         android:id="@+id/table"
-        android:icon="@drawable/ic_dtime"
+        android:icon="@drawable/ic_dtimerblack"
         android:title="Tiempo de Descarga"
-        android:iconTint="@color/time_active"
+        android:iconTint="?attr/colorPrimary"
         android:iconTintMode="add"
         />
     <item
         android:id="@+id/usage"
-        android:icon="@drawable/ic_speed"
-        android:title="Uso por Hora"
-        android:iconTint="@color/speed_active"
+        android:icon="@drawable/ic_account"
+        android:title="Contacto"
+        android:iconTint="?attr/colorPrimary"
         android:iconTintMode="add"
         />
 </menu>
