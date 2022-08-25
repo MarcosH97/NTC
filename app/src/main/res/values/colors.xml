@@ -18,4 +18,5 @@
     <color name="usage_active">#66BB6A</color>
 
     <color name="all_inactive">#90A4AE </color>
+    <color name="Transparent">#00900000</color>
 </resources>

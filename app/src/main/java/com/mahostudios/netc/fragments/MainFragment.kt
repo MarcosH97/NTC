@@ -1,22 +1,15 @@
-package com.mahostudios.ntc.fragments
+package com.mahostudios.netc.fragments
 
-import android.app.Activity
-import android.media.audiofx.DynamicsProcessing
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.mahostudios.ntc.R
-import com.mahostudios.ntc.SectionsPagerAdapter
-import com.mahostudios.ntc.SpeedFragment
-import com.mahostudios.ntc.TableFragment
+import com.mahostudios.netc.R
+import com.mahostudios.netc.SectionsPagerAdapter
+import com.mahostudios.netc.SpeedFragment
+import com.mahostudios.netc.TableFragment
 
 
 // TODO: Rename parameter arguments, choose names that match

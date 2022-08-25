@@ -3,22 +3,22 @@
     <item
         android:id="@+id/speed"
         android:icon="@drawable/ic_speedtestblack"
-        android:title="Velocidad de Conexión"
-        android:iconTint="?attr/colorPrimary"
-        android:iconTintMode="add"
+        android:title="velocidad"
+        android:iconTint="@color/black"
+
         />
     <item
         android:id="@+id/table"
         android:icon="@drawable/ic_dtimerblack"
-        android:title="Tiempo de Descarga"
-        android:iconTint="?attr/colorPrimary"
-        android:iconTintMode="add"
+        android:title="calculadora"
+        android:iconTint="@color/black"
+
         />
     <item
         android:id="@+id/usage"
         android:icon="@drawable/ic_account"
-        android:title="Contacto"
-        android:iconTint="?attr/colorPrimary"
-        android:iconTintMode="add"
+        android:title="contacto"
+        android:iconTint="@color/black"
+
         />
 </menu>

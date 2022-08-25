@@ -1,25 +1,19 @@
-package com.mahostudios.ntc
+package com.mahostudios.netc
 
 
-import android.annotation.SuppressLint
-import android.app.ActivityManager
+import android.app.Dialog
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
-import android.view.View
-import android.widget.GridLayout
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.mahostudios.ntc.fragments.MainFragment
-import com.mahostudios.ntc.fragments.UsageFragment
 import cu.uci.apklischeckpayment.Verify
 
 class MainActivity : AppCompatActivity() {
@@ -32,22 +26,28 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         preferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navCont = findNavController(R.id.fragment)
+
+        if(firstTime()){
+            val ed: SharedPreferences.Editor = preferences.edit()
+            ed.putBoolean("firstime", false)
+            ed.commit()
+            val diag = Dialog(this)
+            diag.setContentView(R.layout.info_dialog)
+            diag.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            diag.setCancelable(true)
+            diag.create()
+            diag.show()
+        }
 
         bottomNavigationView.setupWithNavController(navCont)
 
         bottomNavigationView.selectedItemId = R.id.table
 
-
-        if(!BuildConfig.DEBUG){
-            checkPaid()
-        }
-
     }
-
-
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun DialogMaker(case : Int){
         val dialog = androidx.appcompat.app.AlertDialog.Builder(this)
@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                         }
             }
             1 -> {
-                var pos : Int = 0
                 dialog.setTitle("Apklis no encontrada")
                         .setMessage("Apklis no se encuentra instalado. Por favor descargue e instale la app para comprobar la compra")
                         .setPositiveButton("Cerrar"){_,_->
@@ -130,12 +129,7 @@ class MainActivity : AppCompatActivity() {
                 //@TODO:Wildcard
                 val vips = listOf("marielainfante", "MarcosH", "epsilon", "chopper-kun", "BLNrt", "AntoineAnigma","Winter_Wolf","winter_wolf","Masi","masi")
                 if (vips.contains(user) || ispaid){
-                    if(firstTime()){
-                        val ed: SharedPreferences.Editor = preferences.edit()
-                        ed.putBoolean("firstime", false)
-                        ed.commit()
-                        DialogMaker(4)
-                    }
+
                 }else{
                     DialogMaker(3)
                 }

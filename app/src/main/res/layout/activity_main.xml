@@ -12,10 +12,11 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+
         android:elevation="4dp"
         app:itemIconSize="40dp"
         app:labelVisibilityMode="unlabeled"
+        android:background="@color/purple_500"
         app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

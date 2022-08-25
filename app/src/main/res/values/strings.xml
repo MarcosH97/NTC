@@ -90,4 +90,50 @@
         <item>92160</item>
         <item>153600</item>
     </string-array>
+
+    <string name="a">
+        1.La barra superior muestra 3 componentes:\n
+        <li><b>Tamaño del archivo:</b> Campo de texto donde se introduce el tamaño del archivo el cual se quiere estimar el tiempo de descarga aproximado.</li>\n\n
+        <li><b>Unidad de medida:</b> Lea el tercer punto para mayor referencia.</li>\n\n
+        <li><b>Calcular:</b> Botón para calcular el tiempo aproximado de descarga del archivo en cuestión.</li>
+    </string>
+    <string name="b">
+        2.Los tres recuadros de la imagen superior hacen referencia a:\n\n
+        <li><b>Conexión:</b> Los distintos tipos de conexiones predeterminadas para casos específicos.</li>\n\n
+        <li><b>Velocidad:</b> Velocidad estimada del tipo de conexión correspondiente. <b>ADVERTENCIA:</b> La velocidad pura depende de muchos factores, no siempre será un valor constante, por ende use la tabla como referencia y no como una regla que siempre se cumple.</li>\n\n
+        <li><b>Tiempo:</b> El tiempo aproximado que puede tomar la descarga en dependencia de la velocidad de conexión.</li>\n\n
+        Ir a los puntos 4, 5 y 6 para mayor información.
+    </string>
+    <string name="c">
+        3.Barra de selección de unidad de medida del archivo compuesta por <b>KB</b>(Kilobytes) <b>MB</b>(MegaBytes) y <b>GB</b>(GigaBytes) a razón de 1024 por cada escalón(1024KB = 1MB | 1024MB = 1GB)
+    </string>
+    <string name="d">
+        4.Tipo de conexión. La tabla muestra los tipos más comunes y frecuentes de conexión:\n\n
+        <li><b>Módem:</b> Conexión de tipo acceso telefónico. Poco encontrada en la actualidad. Usada para enviar fax y conectar a internet antes del 2000 a velocidades extremadamente lentas en comaparación a las de hoy en día.</li>\n
+        \n
+        <li><b>ADSL:</b> Actual conexión directa más común. También siendo de acceso telefónico, es el tipo de conexión presente en los puntos de Wi-Fi ETECSA (1 a 2mbits/s) y en Nauta Hogar (varía acorde a la velocidad contratada, si posee el servicio consulte la velocidad en la página www.portal.nauta.cu). Actualmente obsoleta en países desarrollados donde la norma es la fibra óptica.</li>\n\n
+        <li><b>LAN</b> Conexión por defecto que traen las PC de escritorio y algunas computadores personales a través del puerto RJ-45, actualmente capaz de aguantar hasta 10Gbit/s si el equipo lo aguanta.</li>\n\n
+        <li><b>Móviles(2G, 3G, 4G, 5G):</b> Estándares de velocidades móviles, aún con los datos de la tabla, tener en cuenta que son las que más pueden variar al ser ondas de radiofrecuencia, por ende sus velocidades están siempre sujetas a variaciones.</li>
+    </string>
+    <string name="e">
+        5.La velocidad promedio está dada en <b>bits/s</b>, que en contra parte con el <b>byte</b>, la razón entre ambos es de <b>8bits</b> a <b>1byte</b>, por ende, las conexiones de <b>1 mbit/s</b> son aproximadamente iguales a <b>125 kbytes/s</b>. La herramienta se encarga de sacar la cuenta automáticamente mediante un algoritmo lograr el resultado lo más aproximado posible.
+    </string>
+    <string name="f">
+        6.Tiempo aproximado de la descarga en dependencia del peso del archivo y la velocidad de conexión. Tener en cuenta que aunque los cálculos sean exactos, la velocidad en la práctica está sujeta a muchos factores que la pueden hacer variar.
+    </string>
+    <string name="g">
+        7.Si la velocidad que posee no se encuentra en la tabla, puede poner la suya directamente en el campo inferior representado en la imagen. Si la que tiene no se encuentra y la dseconoce, puede hacer uso de la 1ra pestaña (Velocidad) para que un proceso automatizado lo haga por usted y pueda calcular el tiempo acorde a sus características.
+    </string>
+    <string name="h">
+        8.Variantes del tipo de la escala de velocidad. Usar acorde a los resultados obtenidos en la pestaña 1 (Velocidad) en caso de no saber.
+    </string>
+    <string name="z">
+        0.Pestañas disponibles:\n\n
+        <li><b>1-Velocidad:</b> En esta sección se puede calcular su velocidad de conexión aproximada. El resultado depende del ancho de banda de la conexión y la estabilidad de la misma</li>\n\n
+        <li><b>2-Calculadora:</b> Aquí puede calcular el tiempo de descarga aproximado escribiendo el peso del arhivo del cual desea saber el tiempo que puede tomar en descargar</li>\n\n
+        <li><b>3-Contacto:</b> Encontrará esta información presionando en el botón de información así como los contactos del equipo de desarrollo y otros productos de la compañía</li>
+    </string>
+    <string name="description">Esta aplicación fue creada con el fin de ayudar a las personas que suelan realizar descargas frecuentemente y disponen de un tiempo limitado para realizarlas. Con esta app se pueden hacer aproximaciones y para sacar el mayor provecho del tiempo disponible.</string>
+    <string name="description_SL">¿Quiere navegar por los sitios libres de consumo de la compañía ETECSA sin necesidad de abrir el navegador? Con <b>Sitios Libres</b> le damos esta oprtunidad. Disponible en Apklis o presionando el logo a la izquierda.</string>
+    <string name="description_SCU">¿Llega al final del mes y aún tiene los 300 megas? Con esta app tiene más de <b>300 Sitios.CU</b> y puede gastar todos sus megas antes de llegar a la mitad de la lista. Disponible en Apklis o presionando el logo a la izquierda.</string>
 </resources>

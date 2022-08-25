@@ -6,17 +6,17 @@
     app:startDestination="@id/table">
     <fragment
         android:id="@+id/speed"
-        android:name="com.mahostudios.ntc.Speed"
+        android:name="com.mahostudios.netc.Speed"
         android:label="fragment_speed2"
         tools:layout="@layout/fragment_speed2" />
     <fragment
         android:id="@+id/table"
-        android:name="com.mahostudios.ntc.Table"
+        android:name="com.mahostudios.netc.Table"
         android:label="fragment_table2"
         tools:layout="@layout/fragment_table2" />
     <fragment
         android:id="@+id/usage"
-        android:name="com.mahostudios.ntc.Usage"
+        android:name="com.mahostudios.netc.Usage"
         android:label="fragment_usage2"
         tools:layout="@layout/fragment_usage2" />
 </navigation>

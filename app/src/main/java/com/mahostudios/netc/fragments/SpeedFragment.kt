@@ -1,4 +1,4 @@
-package com.mahostudios.ntc
+package com.mahostudios.netc
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
